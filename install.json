@@ -1,0 +1,37 @@
+{
+  "resources": {
+    "head": [
+      {
+        "type": "script",
+        "src": "embed.js"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "token": {
+        "order": 1,
+        "title": "Wootric Account Token",
+        "description": "Enter the Account Token provided to you by Wootric.",
+        "type": "string",
+        "placeholder": "NPS-34b329a"
+      },
+      "automaticUser": {
+        "order": 2,
+        "title": "Automatically detect logged in user information",
+        "description": "<strong>For developers:</strong> This works by iterating through all of the properties on the <code class=\"inline\">window</code> object, looking for any with an <code class=\"inline\">email</code> property <strong>and</strong> an <code class=\"inline\">id</code> property. So for example, this detection would work if you had the following somewhere in your app’s code:<pre><code>window.user = {\n  email: 'user@email.com',\n  created: 1245324354\n};</code></pre>Uncheck this option to manually specify which JavaScript property to use.",
+        "type": "boolean",
+        "default": true
+      },
+      "manuallySpecifiedUser": {
+        "order": 3,
+        "showIf": {
+          "automaticUser": false
+        },
+        "title": "Global JavaScript expression which evaluates to the logged in user",
+        "type": "string",
+        "placeholder": "window.wootricSettings"
+      }
+    }
+  }
+}
