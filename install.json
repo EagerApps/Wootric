@@ -14,7 +14,7 @@
         "title": "Wootric Account Token",
         "description": "Enter the Account Token provided to you by Wootric.",
         "type": "string",
-        "placeholder": "NPS-34b329a"
+        "placeholder": "NPS-3b7ba199"
       },
       "automaticUser": {
         "order": 2,
