@@ -43,8 +43,8 @@
     user.email = localStorage.eagerWootricFakeEmail;
   }
 
-  if (INSTALL_ID === 'preview' && !token){
-    token = 'NPS-3b7ba199';
+  if (INSTALL_ID === 'preview' && !options.token){
+    options.token = 'NPS-3b7ba199';
   }
 
   wootric_survey_immediately = INSTALL_ID === 'preview';
