@@ -16,15 +16,49 @@
         "type": "string",
         "placeholder": "NPS-3b7ba199"
       },
+      "name": {
+        "order": 3,
+        "title": "Product Name",
+        "description": "The name of your product or service, to include in messages.",
+        "type": "string"
+      },
+      "theme": {
+        "order": 5,
+        "title": "Theme",
+        "type": "string",
+        "enum": [
+          "light",
+          "dark"
+        ],
+        "enumNames": {
+          "light": "Light",
+          "dark": "Dark"
+        },
+        "default": "light"
+      },
+      "position": {
+        "order": 7,
+        "title": "Screen Position",
+        "type": "string",
+        "enum": [
+          "top",
+          "bottom"
+        ],
+        "enumNames": {
+          "top": "Top",
+          "bottom": "Bottom"
+        },
+        "default": "bottom"
+      },
       "automaticUser": {
-        "order": 2,
+        "order": 10,
         "title": "Automatically detect logged in user information",
         "description": "<strong>For developers:</strong> This works by iterating through all of the properties on the <code class=\"inline\">window</code> object, looking for any with an <code class=\"inline\">email</code> property. So for example, this detection would work if you had the following somewhere in your app’s code:<pre><code>window.user = {\n  email: 'user@email.com',\n  created: 1245324354\n};</code></pre>Uncheck this option to manually specify which JavaScript property to use.",
         "type": "boolean",
         "default": true
       },
       "manuallySpecifiedUser": {
-        "order": 3,
+        "order": 20,
         "showIf": {
           "automaticUser": false
         },

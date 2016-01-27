@@ -51,7 +51,10 @@
   window.wootricSettings = {
     email: user.email,
     created_at: user.createdAt,
-    account_token: options.token
+    account_token: options.token,
+    product_name: options.name,
+    modal_position: options.position,
+    modal_theme: options.theme
   };
 
   if (window.wootricSettings) {
